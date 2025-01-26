@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { HistoryContainer, HistoryList, Status } from "./styles";
 import { CyclesContext } from "../../contexts/CyclesContext";
+import { formatDistanceToNow } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 export function History(){
     const { cycles } = useContext(CyclesContext)
@@ -8,10 +10,6 @@ export function History(){
     return (
         <HistoryContainer>
             <h1>Meu histórico</h1>
-
-            <pre>
-                {JSON.stringify(cycles, null, 2)}
-            </pre>
             
             <HistoryList>
                 <table>
@@ -24,78 +22,29 @@ export function History(){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="yellow">Em andamento</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="red">Interrompido</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="red">Interrompido</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="red">Interrompido</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="red">Interrompido</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="red">Interrompido</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
-                        <tr>
-                            <td>MBA Full-Stack</td>
-                            <td>400 horas</td>
-                            <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
-                        </tr>
+                        {cycles.map(cycle => {
+                            return (
+                                <tr key={cycle.id}>
+                                    <td>{cycle.task}</td>
+                                    <td>{cycle.minutesAmount} minutos</td>
+                                    <td>{formatDistanceToNow(cycle.startDate, {
+                                        addSuffix: true,
+                                        locale: ptBR
+                                    })}</td>
+                                    <td>
+                                        { cycle.finishedDate && (
+                                            <Status statuscolor="green">Concluído</Status>
+                                        )}
+                                        { cycle.interruptedDate && (
+                                            <Status statuscolor="red">Interrompido</Status>
+                                        )}
+                                        { (!cycle.finishedDate && !cycle.interruptedDate) && (
+                                            <Status statuscolor="yellow">Em progresso</Status>
+                                        )}
+                                    </td>
+                                </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
             </HistoryList>
