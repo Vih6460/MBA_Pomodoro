@@ -76,8 +76,6 @@ export function CyclesContextProvider( {children}:CyclesContextProviderProps ) {
         }))
 
         setActiveCycleId(null)
-
-        // reset()
     }
 
     return (

@@ -32,7 +32,12 @@ export function Home(){
         }
     })
 
-    const { handleSubmit, watch, /*reset*/ } = newCycleForm
+    const { handleSubmit, watch, reset } = newCycleForm
+
+    function handleInterruptCycle(){
+        interruptCurrentCycle()
+        reset()
+    }
 
     const task = watch('task') 
     const isSubmitDisabled = !task
@@ -51,7 +56,7 @@ export function Home(){
                         Começar
                     </StartCountDownButton>
                 ) : (
-                    <StopCountDownButton onClick={interruptCurrentCycle} type="button">
+                    <StopCountDownButton onClick={handleInterruptCycle} type="button">
                         <HandPalm size={24} />
                         Interromper
                     </StopCountDownButton>
