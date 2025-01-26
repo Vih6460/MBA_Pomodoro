@@ -1,9 +1,17 @@
+import { useContext } from "react";
 import { HistoryContainer, HistoryList, Status } from "./styles";
+import { CyclesContext } from "../../contexts/CyclesContext";
 
 export function History(){
+    const { cycles } = useContext(CyclesContext)
+
     return (
         <HistoryContainer>
             <h1>Meu histórico</h1>
+
+            <pre>
+                {JSON.stringify(cycles, null, 2)}
+            </pre>
             
             <HistoryList>
                 <table>
@@ -20,13 +28,13 @@ export function History(){
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statuscolor="green">Concluído</Status></td>
+                            <td><Status statuscolor="yellow">Em andamento</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statuscolor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
@@ -50,7 +58,7 @@ export function History(){
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statuscolor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="red">Interrompido</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
@@ -74,7 +82,7 @@ export function History(){
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statuscolor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="red">Interrompido</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
