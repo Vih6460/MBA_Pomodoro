@@ -20,73 +20,73 @@ export function History(){
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="yellow">Em andamento</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="red">Interrompido</Status></td>
+                            <td><Status statuscolor="red">Interrompido</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="yellow">Em andamento</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="red">Interrompido</Status></td>
+                            <td><Status statuscolor="red">Interrompido</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="red">Interrompido</Status></td>
+                            <td><Status statuscolor="red">Interrompido</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="yellow">Em andamento</Status></td>
+                            <td><Status statuscolor="yellow">Em andamento</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>MBA Full-Stack</td>
                             <td>400 horas</td>
                             <td>Há 6 meses</td>
-                            <td><Status statusColor="green">Concluído</Status></td>
+                            <td><Status statuscolor="green">Concluído</Status></td>
                         </tr>
                     </tbody>
                 </table>
